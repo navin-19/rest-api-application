@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask REST API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .input-container {
+    position: relative;
+    margin: 20px 0;
+    }
+    
+    .input-float {
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        transition: border-color 0.3s ease;
+    }
+    
+    .input-float:hover {
+        border-color: #3498db;
+    }
+    
+    .input-float:focus {
+        outline: none;
+        border-color: #3498db;
+    }
+    
+    .input-float + label {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: #999;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .input-float:focus + label,
+    .input-float:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 5px;
+        font-size: 12px;
+        background-color: white;
+        padding: 0 5px;
+        color: #3498db;
+    }
+    .task {
+            padding: 15px 5px 15px 5px;
+            font-size: large;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+    .task.done {
+         background: linear-gradient(45deg, #9aeffe, #066185);
+        text-decoration: line-through;
+        }
+       button{
+            background-color: transparent;
+            color: #000000;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #74baf0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            justify-content: space-between;
+}
+
+    button:hover {
+        background-color: #f6f6f7;
+        color: #06578d;
+}
+        form {
+            margin: 20px 0;
+        }
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    
+    <form id="taskForm" class="input-container">
+         <input type="text" id="taskInput" class="input-float" placeholder=" ">
+            <label for="float-input">Enter new task</label>
+    </form>
+    
+    <div id="taskList">
+        <!-- Tasks will be loaded here -->
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
