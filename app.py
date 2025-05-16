@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 # In-memory "database" for demonstration
 tasks = [
-    {"id": 1, "title": "Learn Flask", "done": False},
-    {"id": 2, "title": "Build REST API", "done": False}
+    {"id": 1, "title": "Complete today task", "done": False},
 ]
 
 @app.route('/')
